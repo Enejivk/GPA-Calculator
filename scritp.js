@@ -4,9 +4,7 @@ const inputScore = document.querySelector('#score');
 const creditLoadDropdown = document.querySelector('#credit-load');
 const gpaScaleDropdown = document.querySelector('#gpaScaleDropdown');
 const courseList = document.querySelector('.course-list');
-const inputGrade = document.querySelector('#grade');
 const calculateButton = document.querySelector('#calculate');
-const formSection = document.querySelector('form');
 const displayGpa = document.querySelector('.display-gpa-canva');
 const listOfCreditLoad = [];
 
@@ -18,16 +16,41 @@ function clearAllInput(){
 
 
 }
+function GetFourPointGrade(score){
+    let fourPointGrade = score >= 90 ? 'A' :
+            score >= 80 ? 'B' :
+            score >= 70 ? 'C' :
+            score >= 60 ? 'D' : 'F'
+    return fourPointGrade;
+}
+
+function getFivePointGrade(score){
+    let fivePointGrade = score >= 70 ? 'A':
+            score >= 60 ? 'B':
+            score >= 50 ? 'C':
+            score >= 45 ? 'D':
+            score >= 40 ? 'E': 'F'
+    return fivePointGrade
+}
+
 function getCourseDetails(e){
+    let grade = ''
+    displayGpa.innerHTML = ''
     e.preventDefault()
+
+     if (gpaScaleDropdown.value === '5'){
+         grade = getFivePointGrade(Number(inputScore.value))
+    } else {
+         grade = GetFourPointGrade(Number(inputScore.value))
+    }
     HTMLStrings = `
     <p>
         <span>${inputCourseTitle.value}</span>
-        <span>${inputGrade.value.toUpperCase()}</span>
+        <span>${grade}</span>
         <span>${inputScore.value}</span>
     </p>
     `
-    if(inputScore.value && inputGrade.value && inputScore.value && creditLoadDropdown.value && gpaScaleDropdown.value){
+    if(inputScore.value && inputScore.value && creditLoadDropdown.value && gpaScaleDropdown.value){
         
         courseList.insertAdjacentHTML("beforeend", HTMLStrings);
         listOfCreditLoad.push(creditLoadDropdown.value)
@@ -105,4 +128,4 @@ function calculateGpa(){
     CalculateTotalScore(listOfAllScores)
 }
 calculateButton.addEventListener('click', calculateGpa);
-addButton.addEventListener('click', getCourseDetails)
+addButton.addEventListener('click', getCourseDetails);
