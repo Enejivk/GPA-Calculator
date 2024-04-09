@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <h1>GPA CALCULATOR</h1>
+        <div class="gpa-scale">
+            <label for="gpa-scale">GPA Scale</label>
+            <select name="gpaScaleDropdown" id="gpaScaleDropdown" required>
+                <option value="" disabled selected>Select A Scale</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <section class="main">
+            <form action="" id="courseDetails">
+                <label for="course-title">Course Title</label>
+                <input type="text" id="course-title" />
+                <label for="score">Scores</label>
+                <input type="number" max="100" min="0" id="score" />
+                <label for="credit-load">Credit Load</label>
+                <select name="credit-load" id="credit-load">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <label for="grade">Grade</label>
+                <input type="text" id="grade" placeholder="e.g A" />
+                <button type="submit" id="submit" class="btn">ADD COURSE</button>
+                <div class="display-gpa-canva"></div>
+            </form>
+            <div class="course-list"></div>
+            <button type="submit" id="calculate" class="btn">Calculate GPA</button>
+        </section>
+        <script src="scritp.js"></script>
+    </body>
+</html>

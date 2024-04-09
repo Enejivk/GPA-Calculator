@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(./image/front-view-stacked-books-graduation-cap-diploma-education-day.jpg);
+    background-size: 120rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Poppins, Georgia, "Times New Roman", Times, serif;
+}
+h1 {
+    background-color: rgb(133, 133, 162);
+    text-align: center;
+}
+form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+input,
+select,
+#submit,
+.btn {
+    height: 30px;
+    padding: 0 10px;
+}
+.btn {
+    background-color: rgb(133, 133, 162);
+    width: 50%;
+    min-width: 100px;
+    min-height: 35px;
+    margin: 15px auto;
+}
+#calculate {
+    display: none;
+}
+.gpa-scale {
+    margin: 8px auto;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+.course-list {
+    width: 70%;
+}
+.course-list p {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4px;
+    background-color: rgb(242, 205, 205);
+}
+.course-list p span:first-child {
+    width: 60%;
+    overflow: hidden;
+}
+.course-list P span:nth-child(2) {
+    width: 20%;
+}
+.course-list P span:nth-child(3) {
+    width: 20%;
+    overflow: hidden;
+}
+.center-gpa-display-screen {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.gpa-display-screen {
+    background-color: rgb(133, 133, 162);
+    font-size: 20px;
+    padding: 20px;
+}
+.go-back {
+    padding: 15px 29px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 10px;
+}
