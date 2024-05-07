@@ -77,9 +77,9 @@ function CalculateTotalScore(listOfAllScores){
     if(GPA){
         GPAhTMLString = `
         <div class="gpa-display-screen">
-            <p>Your GPA: ${GPA}</p>
+            <p>GPA: ${GPA}</p>
             <p>Total courses: ${listOfAllScores.length}</p>
-            <p>Gpa Scale: ${gpaScaleDropdown.value}</p>
+            <p>GPA Scale: ${gpaScaleDropdown.value}</p>
         </div>
           `
     }

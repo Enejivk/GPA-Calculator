@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 body {
-    background-image: url(./image/front-view-stacked-books-graduation-cap-diploma-education-day.jpg);
+    
     background-size: 120rem;
     background-repeat: no-repeat;
     background-position: center;
@@ -15,6 +15,7 @@ body {
 h1 {
     background-color: rgb(133, 133, 162);
     text-align: center;
+    color: white;
 }
 form {
     width: 60%;
@@ -33,6 +34,9 @@ select,
 .btn {
     height: 30px;
     padding: 0 10px;
+}
+.btn{
+    color: white;
 }
 .btn {
     background-color: rgb(133, 133, 162);
@@ -81,6 +85,7 @@ select,
     background-color: rgb(133, 133, 162);
     font-size: 20px;
     padding: 20px;
+    color: white;
 }
 .go-back {
     padding: 15px 29px;
